@@ -79,11 +79,13 @@ public class ClockDisplay
      */
     private void updateDisplay()
     {
+        if (hours.getValue()>12) meridian = " PM";
+        else meridian = " AM";
         displayString = hours.getDisplayValue() + ":" + 
-                        minutes.getDisplayValue();
+                        minutes.getDisplayValue() + meridian;
     }
     
-    public String set12HourInternalDisplay()
+    public String get12HourInternalDisplay()
     {
         hours.setValue(12);
         updateDisplay();
