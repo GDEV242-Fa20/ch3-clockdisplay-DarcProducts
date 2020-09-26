@@ -17,7 +17,7 @@ public class ClockDisplay
     private NumberDisplay hours;
     private NumberDisplay minutes;
     private String displayString;    // simulates the actual display
-    private boolean isNightime = false;
+    private String meridian = "AM";
     
     /**
      * Constructor for ClockDisplay objects. This constructor 
@@ -83,8 +83,10 @@ public class ClockDisplay
                         minutes.getDisplayValue();
     }
     
-    public String get12HourInternalDisplay()
+    public String set12HourInternalDisplay()
     {
+        hours.setValue(12);
+        updateDisplay();
         return displayString;
     }
 }
