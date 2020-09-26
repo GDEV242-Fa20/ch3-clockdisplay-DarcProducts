@@ -81,4 +81,9 @@ public class ClockDisplay
         displayString = hours.getDisplayValue() + ":" + 
                         minutes.getDisplayValue();
     }
+    
+    public String get24HourInternalDisplay()
+    {
+        return displayString;
+    }
 }
