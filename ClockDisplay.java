@@ -86,6 +86,7 @@ public class ClockDisplay
     {
         String meridian = " AM";
         if (hours.getValue() > 12) meridian = " PM";
+        else meridian = " AM";
         
         int tempNum = hours.getValue() % 12;
         if (tempNum==0) tempNum = 12;
