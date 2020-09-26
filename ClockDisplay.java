@@ -84,6 +84,15 @@ public class ClockDisplay
     
     public String get24HourInternalDisplay()
     {
+        String meridian = " AM";
+        if (hours.getValue() > 12) meridian = " PM";
+        
+        int tempNum = hours.getValue() % 12;
+        if (tempNum==0) tempNum = 12;
+        
+        displayString =  tempNum + ":" + 
+        minutes.getDisplayValue() + meridian;
+        
         return displayString;
     }
 }
